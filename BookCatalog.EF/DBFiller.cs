@@ -33,6 +33,9 @@ public class DBFiller
             dc.Book.Add(new Book { Title = "DevOps with Docker, Kubernetes, and GitHub Actions – Automate CI/CD Pipelines for Scalable Cloud Deployments", Author = "Ben J. Ortega", Year = 2024 });
             dc.Book.Add(new Book { Title = "Cybersecurity Fundamentals with Python – Build Secure Systems and Detect Threats using Nmap, Wireshark, and Scapy", Author = "Tariq E. Hassan", Year = 2024 });
             dc.Book.Add(new Book { Title = "Data Science in Practice – Analyze, Visualize, and Deploy Insights using Pandas, Power BI, and Streamlit", Author = "Emma D. Clarke", Year = 2025 });
+            dc.Book.Add(new Book { Title = "La mia vita a Oggetti", Author = "Matteo Valenzi", Year = 2025 });
+            dc.Book.Add(new Book { Title = "Mein Leben in Objekten", Author = "Matteo Valenzi", Year = 2026 });
+            dc.Book.Add(new Book { Title = "My Object Oriented Life - An alternative view of existence", Author = "Matteo Valenzi", Year = 2025 });
 
             dc.SaveChanges();
             Console.ForegroundColor = ConsoleColor.Green;
