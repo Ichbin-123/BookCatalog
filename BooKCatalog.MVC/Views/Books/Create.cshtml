@@ -1,0 +1,25 @@
+﻿@using BookCatalog.MVC.Models
+@model BookDTO
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Inserisci un nuovo libro</h1>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label">Title</label>
+        <input  asp-for="Title" type="text" class="form-control" id="title" aria-describedby="BookTitle" name="title" placeholder="Insert Book's Title...">
+        <div id="BookTitle" class="form-text">Insert the complete Title</div>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Author" class="form-label">Author</label>
+        <input asp-for="Author" type="text" class="form-control" id="author" name="author" placeholder="Inserr the Author of the book...">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Year" for="year" class="form-label">Year</label>
+        <input asp-for="Year" type="number" class="form-control" id="year" name="year" placeholder="Insert the year of publication...'">
+    </div>    
+    <button type="submit" class="btn btn-primary">Insert Book</button>
+</form>

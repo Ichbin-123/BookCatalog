@@ -1,0 +1,41 @@
+﻿@model List<BookModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["MessaggioTest"] = ViewData["MessaggioTest"]?.ToString();
+}
+
+@* {Model.Count} *@
+<h1>Elenco Libri</h1>
+@* <p>@ViewData["MessaggioTest"]</p> *@
+<a class="btn btn-primary" asp-action="Create">Insert a new Book in the Catalogue</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var b in Model)
+        {
+            <tr>
+                <td>@b.Id</td>
+                <td>@b.Title</td>
+                <td>@b.Author</td>
+                <td>@b.Year</td>
+            </tr>
+        }        
+    </tbody>
+</table>
+
+<br />
+
+<hr />
+
+
+@*@Html.ActionLink("Create - Add a new Book into the DB", "Create", "Books", htmlAttributes: new {@title = "Vai alla pagina Create"})*@
